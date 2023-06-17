@@ -1,0 +1,88 @@
+
+@import "../../assets/css/remixicon.css";
+
+* a {
+    text-decoration: none;
+    letter-spacing: 1px
+}
+
+ul {
+    list-style-type: none;
+}
+
+.nav-menus{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    margin-top: 20px;
+    justify-content: right;
+}
+
+.notications-list{
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-dropdown{
+    display: flex;
+    flex-direction: column;
+}
+
+img{
+    height: 50px;
+    border-radius: 100%;
+}
+
+/* CSS */
+.nav-bar-button {
+    background:none;
+    border:none;
+    margin:0;
+    padding:0;
+    cursor: pointer;
+    font-size: 17px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    margin-bottom: 3px;
+    margin-left: 3px;
+}
+
+
+@font-face {
+    font-family: "remixicon";
+    src: url('../../assets/fonts/remixicon.eot?t=1590207869815'); /* IE9*/
+    src: url('../../assets/fonts/remixicon.eot?t=1590207869815#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url("../../assets/fonts/remixicon.woff2?t=1590207869815") format("woff2"),
+    url("../../assets/fonts/remixicon.woff?t=1590207869815") format("woff"),
+    url('../../assets/fonts/remixicon.ttf?t=1590207869815') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('../../assets/fonts/remixicon.svg?t=1590207869815#remixicon') format('svg'); /* iOS 4.1- */
+    font-display: swap;
+}
+  
+[class^="ri-"], [class*=" ri-"] {
+    font-family: 'remixicon' !important;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.notification-button{
+    background:none;
+    border:none;
+    margin:0;
+    padding:0;
+    cursor: pointer;
+}

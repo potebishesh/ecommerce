@@ -1,0 +1,106 @@
+ /* @import "../../assets/css/style.css";  */
+/* @import "../../assets/css/linearicon.css";
+ */
+/* @import "../../assets/css/vendors/themify.css";
+@import "../../assets/css/ratio.css";
+;
+@import "../../assets/css/vendors/feather-icon.css";
+@import "../../assets/css/vendors/animate.css";
+@import "../../assets/css/vendors/bootstrap.css";
+@import "../../assets/css/vector-map.css"; */
+@import "../../assets/css/remixicon.css";
+
+.page-wrapper{
+    top: 0;
+    z-index: 7;
+    line-height: inherit;
+    background: var(--theme-color);
+    width: 280px;
+    height: 100%;
+    text-align: left;
+    -webkit-box-shadow: 0 0 21px 0 rgba(89, 102, 122, 0.1);
+    box-shadow: 0 0 21px 0 rgba(89, 102, 122, 0.1);
+    background: linear-gradient(-45deg, #0da487, #009289);
+    background-size: 400% 400%;
+    -webkit-animation: gradient 15s ease infinite;
+    animation: gradient 15s ease infinite;
+    position: fixed;
+    overflow-y: scroll;
+    float:left;
+}
+
+* a {
+    color: white;
+    text-decoration: none;
+    letter-spacing: 1px
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+@font-face {
+    font-family: "remixicon";
+    src: url('../../assets/fonts/remixicon.eot?t=1590207869815'); /* IE9*/
+    src: url('../../assets/fonts/remixicon.eot?t=1590207869815#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url("../../assets/fonts/remixicon.woff2?t=1590207869815") format("woff2"),
+    url("../../assets/fonts/remixicon.woff?t=1590207869815") format("woff"),
+    url('../../assets/fonts/remixicon.ttf?t=1590207869815') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('../../assets/fonts/remixicon.svg?t=1590207869815#remixicon') format('svg'); /* iOS 4.1- */
+    font-display: swap;
+}
+  
+[class^="ri-"], [class*=" ri-"] {
+font-family: 'remixicon' !important;
+font-style: normal;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+
+.sidebar-list{
+    background-color: transparent;
+    box-shadow: none;
+    padding: 5px 20px 5px 20px;
+}
+
+.sidebar-submenu>a::before {
+    content: "-";
+    color: white;
+    margin-right: 10px
+}
+
+i {
+    margin-right: 10px
+}
+
+
+.sidebar-submenu{
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-submenu>a{
+    padding: 10px 10px 10px 0px;
+}
+
+.sidebar-title{
+    color: white;
+}
+
+::ng-deep .mat-expansion-indicator:after {
+    color: white;
+}
+
+.sidebar-links{
+    padding-left: 0px;
+}
+
+.single-option{
+    padding-top: 19px;
+    padding-bottom: 19px;
+    padding-left: 44px;
+}
+  
+  
