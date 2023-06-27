@@ -67,6 +67,9 @@ img{
     margin-left: 3px;
 }
 
+.mat-badge-content {
+    background: #ff7272;
+}
 
 @font-face {
     font-family: "remixicon";
