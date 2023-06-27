@@ -1,0 +1,79 @@
+
+<form>
+    <mat-tab-group animationDuration="0ms">
+        <mat-tab label="Account">
+            <div>
+                <h5>Account Information</h5>
+            </div>
+            <div class="row align-items-center">
+                <label class="form-label-title col-sm-3 mb-0">First Name</label>
+                <mat-form-field>
+                    <mat-label>First Name</mat-label>
+                    <input matInput>
+                </mat-form-field>
+            </div>
+            <div class="row align-items-center">
+                <label class="form-label-title col-sm-3 mb-0">Email Address</label>
+                <mat-form-field>
+                    <mat-label>Email Address</mat-label>
+                    <input matInput>
+                </mat-form-field>
+            </div>
+            <div class="row align-items-center">
+                <label class="form-label-title col-sm-3 mb-0">Password</label>
+                <mat-form-field>
+                    <mat-label>Password</mat-label>
+                    <input matInput>
+                </mat-form-field>
+            </div>
+            <div class="row align-items-center">
+                <label class="form-label-title col-sm-3 mb-0">Confirm Password</label>
+                <mat-form-field>
+                    <mat-label>Confirm Password</mat-label>
+                    <input matInput>
+                </mat-form-field>
+            </div>
+        </mat-tab>
+        <mat-tab label="Permission"> 
+            <div>
+                <h5>Product Related Permission</h5>
+            </div>
+            <div class="row align-items-center">
+                <label class="col-sm-3 col-form-label form-label-title"> Add Product </label>
+                <mat-slide-toggle [(ngModel)]="productAddProductChecked" name="productAddProductChecked" [color]="primary"></mat-slide-toggle>
+            </div>
+            <div class="row align-items-center">
+                <label class="col-sm-3 col-form-label form-label-title"> Update Product </label>
+                <mat-slide-toggle [(ngModel)]="productUpdateProductChecked" name="productUpdateProductChecked" [color]="primary"></mat-slide-toggle>
+            </div>
+            <div class="row align-items-center">
+                <label class="col-sm-3 col-form-label form-label-title"> Delete Product </label>
+                <mat-slide-toggle [(ngModel)]="productDeleteProductChecked" name="productDeleteProductChecked" [color]="primary"></mat-slide-toggle>
+            </div>
+            <div class="row align-items-center">
+                <label class="col-sm-3 col-form-label form-label-title"> Apply Discount </label>
+                <mat-slide-toggle [(ngModel)]="productDiscountChecked" name="productDiscountChecked" [color]="primary"></mat-slide-toggle>
+            </div>
+            <div>
+                <h5>Category Related Permission</h5>
+            </div>
+            <div class="row align-items-center">
+                <label class="col-sm-3 col-form-label form-label-title"> Add Product </label>
+                <mat-slide-toggle [(ngModel)]="categoryAddProductChecked" name="categoryAddProductChecked" [color]="primary"></mat-slide-toggle>
+            </div>
+            <div class="row align-items-center">
+                <label class="col-sm-3 col-form-label form-label-title"> Update Product </label>
+                <mat-slide-toggle [(ngModel)]="categoryUpdateProductChecked" name="categoryUpdateProductChecked" [color]="primary"></mat-slide-toggle>
+            </div>
+            <div class="row align-items-center">
+                <label class="col-sm-3 col-form-label form-label-title"> Delete Product </label>
+                <mat-slide-toggle [(ngModel)]="categoryDeleteProductChecked" name="categoryDeleteProductChecked" [color]="primary"></mat-slide-toggle>
+            </div>
+            <div class="row align-items-center">
+                <label class="col-sm-3 col-form-label form-label-title"> Apply Discount </label>
+                <mat-slide-toggle [(ngModel)]="categoryDiscountChecked" name="categoryDiscountChecked" [color]="primary"></mat-slide-toggle>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+    <button class="submitButton" type="submit">Submit</button>
+</form>

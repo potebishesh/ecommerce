@@ -54,6 +54,18 @@
                                 </div>
 
                                 <div class="row align-items-center">
+                                    <label class="col-sm-3 col-form-label form-label-title">Brand Menu</label>
+                                    <mat-form-field>
+                                        <mat-label>Brand Menu</mat-label>
+                                        <mat-select>
+                                          <mat-option *ngFor="let brandMenu of brandMenus" [value]="brandMenu">
+                                            {{brandMenu}}
+                                          </mat-option>
+                                        </mat-select>
+                                    </mat-form-field>  
+                                </div>
+
+                                <div class="row align-items-center">
                                     <label class="col-sm-3 col-form-label form-label-title">Unit</label>
                                     <mat-form-field>
                                         <mat-label>Unit</mat-label>
@@ -75,12 +87,12 @@
                                 
                                 <div class="mb-4 row align-items-center">
                                     <label class="col-sm-3 col-form-label form-label-title">Exchangeable</label>
-                                    <mat-slide-toggle [(ngModel)]="exchangeableChecked" [color]="primary"></mat-slide-toggle>
+                                    <mat-slide-toggle [(ngModel)]="exchangeableChecked" name="exchangeableChecked" [color]="primary"></mat-slide-toggle>
                                 </div>
 
                                 <div class="row align-items-center">
                                     <label class="col-sm-3 col-form-label form-label-title">Refundable</label>
-                                    <mat-slide-toggle [(ngModel)]="refundableChecked" [color]="primary"></mat-slide-toggle>
+                                    <mat-slide-toggle [(ngModel)]="refundableChecked" name="refundableChecked" [color]="primary"></mat-slide-toggle>
                                 </div>
                             </form>
                         </div>
@@ -126,6 +138,97 @@
                         </div>
                     </div>
 
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-header-2">
+                                <h5>Product videos</h5>
+                            </div>
+
+                            <form class="theme-form theme-form-2 mega-form">
+                                <div class="row align-items-center">
+                                    <label class="col-sm-3 col-form-label form-label-title">Video Provider</label>
+                                    <mat-form-field>
+                                        <mat-label>Video Provider</mat-label>
+                                        <mat-select>
+                                          <mat-option *ngFor="let videoProvider of videoProviders" [value]="videoProvider">
+                                            {{videoProvider}}
+                                          </mat-option>
+                                        </mat-select>
+                                    </mat-form-field> 
+                                    
+                                    
+                                </div>
+                                <div class="row align-items-center">
+                                    <label class="form-label-title col-sm-3 mb-0">Video Link</label>
+                                    <mat-form-field>
+                                        <mat-label>Video Link</mat-label>
+                                        <input matInput>
+                                    </mat-form-field>
+                                </div>                       
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-header-2">
+                                <h5>Product Variations</h5>
+                            </div>
+
+                            <form class="theme-form theme-form-2 mega-form">
+                                <div class="row align-items-center">
+                                    <label class="col-sm-3 col-form-label form-label-title">Color</label>
+                                    <mat-form-field>
+                                        <mat-label>Color</mat-label>
+                                        <mat-select>
+                                          <mat-option *ngFor="let color of colors" [value]="color">
+                                            {{color}}
+                                          </mat-option>
+                                        </mat-select>
+                                    </mat-form-field> 
+                                </div>
+
+                                <div class="row align-items-center">
+                                    <label class="col-sm-3 col-form-label form-label-title">Size</label>
+                                    <mat-form-field>
+                                        <mat-label>Size</mat-label>
+                                        <mat-select>
+                                          <mat-option *ngFor="let size of sizes" [value]="size">
+                                            {{size}}
+                                          </mat-option>
+                                        </mat-select>
+                                    </mat-form-field> 
+                                </div>
+
+                                <div class="row align-items-center">
+                                    <label class="col-sm-3 col-form-label form-label-title">Material</label>
+                                    <mat-form-field>
+                                        <mat-label>Material</mat-label>
+                                        <mat-select>
+                                          <mat-option *ngFor="let material of materials" [value]="material">
+                                            {{material}}
+                                          </mat-option>
+                                        </mat-select>
+                                    </mat-form-field> 
+                                </div>
+
+                                <div class="row align-items-center">
+                                    <label class="col-sm-3 col-form-label form-label-title">Style</label>
+                                    <mat-form-field>
+                                        <mat-label>Style</mat-label>
+                                        <mat-select>
+                                          <mat-option *ngFor="let style of styles" [value]="style">
+                                            {{style}}
+                                          </mat-option>
+                                        </mat-select>
+                                    </mat-form-field> 
+                                </div>                     
+                            </form>
+                        </div>
+                    </div>
+
+
+
                    
                     <div class="card">
                         <div class="card-body">
@@ -137,7 +240,7 @@
                                 <div class="mb-4 row align-items-center">
                                     <label class="form-label-title col-sm-3 mb-0">Weight(kg)</label>
                                     <mat-form-field>
-                                        <mat-label>Product Name</mat-label>
+                                        <mat-label>Weight</mat-label>
                                         <input matInput>
                                     </mat-form-field>
                                 </div>
@@ -272,6 +375,65 @@
                                     </tr>
                                 </tbody>
                             </table>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-header-2">
+                                <h5>Link Products</h5>
+                            </div>
+
+                            <form class="theme-form theme-form-2 mega-form">
+                                <div class="mb-4 row align-items-center">
+                                    <label class="col-sm-3 form-label-title">Upsells</label>
+                                    <mat-form-field>
+                                        <mat-label>Upsells</mat-label>
+                                        <input matInput>
+                                    </mat-form-field>
+                                </div>
+
+                                <div class="mb-4 row align-items-center">
+                                    <label class="col-sm-3 form-label-title">Cross-Sells</label>
+                                    <mat-form-field>
+                                        <mat-label>Cross-Sells</mat-label>
+                                        <input matInput>
+                                    </mat-form-field>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-header-2">
+                                <h5>Search Engine Listing</h5>
+                            </div>
+
+                            <form class="theme-form theme-form-2 mega-form">
+                                <div class="mb-4 row align-items-center">
+                                    <label class="col-sm-3 form-label-title">Page title</label>
+                                    <mat-form-field>
+                                        <mat-label>Page title</mat-label>
+                                        <input matInput>
+                                    </mat-form-field>
+                                </div>
+
+                                <div class="row align-items-center">
+                                    <label class="form-label-title col-sm-3 mb-0">Meta description</label>
+                                    <mat-form-field>
+                                        <mat-label>Meta description</mat-label>
+                                        <textarea matInput></textarea>
+                                    </mat-form-field>
+                                </div>
+                                <div class="mb-4 row align-items-center">
+                                    <label class="col-sm-3 form-label-title">URL handle</label>
+                                    <mat-form-field>
+                                        <mat-label>URL handle</mat-label>
+                                        <input matInput>
+                                    </mat-form-field>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>

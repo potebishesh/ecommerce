@@ -17,7 +17,7 @@
                                     <span>Dashboard</span>
                                 </a>
                             </div>
-                            
+                            <mat-accordion mutli="false">
                             <mat-expansion-panel class="sidebar-list">
                                 <mat-expansion-panel-header>
                                   <mat-panel-title class="sidebar-title">
@@ -39,8 +39,8 @@
                                   </mat-panel-title>
                                 </mat-expansion-panel-header>
                                 <div class="sidebar-submenu">
-                                    <a>Category List</a>
-                                    <a>Add New Category</a>
+                                    <a routerLink = 'category-list'>Category List</a>
+                                    <a routerLink = 'add-new-category'>Add New Category</a>
                                 </div>
                             </mat-expansion-panel>
 
@@ -65,8 +65,8 @@
                                   </mat-panel-title>
                                 </mat-expansion-panel-header>
                                 <div class="sidebar-submenu">
-                                    <a>All users</a>
-                                    <a>Add new user</a>
+                                    <a routerLink = 'all-users'>All users</a>
+                                    <a routerLink = 'add-new-user'>Add new user</a>
                                 </div>
                             </mat-expansion-panel>
 
@@ -98,9 +98,9 @@
                                 </mat-panel-title>
                                 </mat-expansion-panel-header>
                                 <div class="sidebar-submenu">
-                                    <a>Order List</a>
-                                    <a>Order Detail</a>
-                                    <a>Order Tracking</a>
+                                    <a routerLink = "order-list">Order List</a>
+                                    <a routerLink = "order-detail">Order Detail</a>
+                                    <a routerLink = "order-tracking">Order Tracking</a>
                                 </div>
                             </mat-expansion-panel>
 
@@ -176,7 +176,7 @@
                                     <span>List Page</span>
                                 </a>
                             </div>
-
+                            </mat-accordion>
                     
                         </ul>
                     </div>

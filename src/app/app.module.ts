@@ -15,11 +15,19 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatBadgeModule } from '@angular/material/badge';
 import { AddNewProductsComponent } from './add-new-products/add-new-products.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatTabsModule } from '@angular/material/tabs';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { FormsModule } from '@angular/forms';
-
+import { AllUsersComponent } from './all-users/all-users.component';
+import { AddNewUserComponent } from './add-new-user/add-new-user.component';
+import { CategoryListComponent } from './category-list/category-list.component';
+import { AddNewCategoryComponent } from './add-new-category/add-new-category.component';
+import { UserSearchPipe } from './utils/user-search.pipe';
+import { OrderListComponent } from './order-list/order-list.component';
+import { OrderDetailComponent } from './order-detail/order-detail.component';
+import { OrderTrackingComponent } from './order-tracking/order-tracking.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +36,15 @@ import { FormsModule } from '@angular/forms';
     DashboardComponent,
     ProductsComponent,
     NavBarComponent,
-    AddNewProductsComponent
+    AddNewProductsComponent,
+    AllUsersComponent,
+    AddNewUserComponent,
+    CategoryListComponent,
+    AddNewCategoryComponent,
+    UserSearchPipe,
+    OrderListComponent,
+    OrderDetailComponent,
+    OrderTrackingComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +59,8 @@ import { FormsModule } from '@angular/forms';
     MatInputModule,
     MatSelectModule,
     MatSlideToggleModule,
-    FormsModule
+    FormsModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

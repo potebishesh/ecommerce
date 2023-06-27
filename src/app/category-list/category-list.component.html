@@ -1,0 +1,24 @@
+
+<div class="table-responsive table-product">
+    <table class="custom-table" id="table_id">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Date</th>
+                <th>Product Image</th>
+                <th>Icon</th>
+                <th>Slug</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor = "let category of categories">
+                <td> {{category.productName}} </td>
+                <td> {{category.date}} </td>
+                <td> {{category.image}} </td>
+                <td> {{category.icon}} </td>
+                <td> {{category.slug}} </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

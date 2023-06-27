@@ -1,0 +1,65 @@
+
+<div class="title-header option-title">
+    <h3>All Users</h3>
+    <button class="button-18" routerLink = '/add-new-user' type="button">Add new user</button>
+</div>
+
+<input type="text" [(ngModel)]="searchField" placeholder="Search any fields"/>
+
+<div class="table-responsive table-product">
+    <table class="custom-table" id="table_id">
+        <thead>
+            <tr>
+                <th>User</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Option</th>
+            </tr>
+        </thead>
+
+        <tbody>
+                <tr *ngFor = "let user of users | userFilter:searchField">
+                    <td>
+                        <div class="table-image">
+                            <img src="assets/images/users/1.jpg" class="img-fluid"
+                                alt="">
+                        </div>
+                    </td>
+
+                    <td>
+                        <div class="user-name">
+                            <span>{{user.name}}</span>
+                        </div>
+                    </td>
+
+                    <td>{{user.phone}}</td>
+
+                    <td>{{user.email}}</td>
+
+                    <td>
+                        <ul>
+                            <li>
+                                <a href="order-detail.html">
+                                    <i class="ri-eye-line"></i> View
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <i class="ri-pencil-line"></i> Edit 
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="javascript:void(0)" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModalToggle"> Delete
+                                    <i class="ri-delete-bin-line"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+</div>
