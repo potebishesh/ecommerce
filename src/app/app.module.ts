@@ -19,15 +19,18 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { NgxPaginationModule } from 'ngx-pagination';
 import { FormsModule } from '@angular/forms';
 import { AllUsersComponent } from './all-users/all-users.component';
 import { AddNewUserComponent } from './add-new-user/add-new-user.component';
 import { CategoryListComponent } from './category-list/category-list.component';
 import { AddNewCategoryComponent } from './add-new-category/add-new-category.component';
 import { UserSearchPipe } from './utils/user-search.pipe';
+import { ProductSearchPipe } from './utils/product-search.pipe';
 import { OrderListComponent } from './order-list/order-list.component';
 import { OrderDetailComponent } from './order-detail/order-detail.component';
 import { OrderTrackingComponent } from './order-tracking/order-tracking.component';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -42,6 +45,7 @@ import { OrderTrackingComponent } from './order-tracking/order-tracking.componen
     CategoryListComponent,
     AddNewCategoryComponent,
     UserSearchPipe,
+    ProductSearchPipe,
     OrderListComponent,
     OrderDetailComponent,
     OrderTrackingComponent
@@ -60,7 +64,9 @@ import { OrderTrackingComponent } from './order-tracking/order-tracking.componen
     MatSelectModule,
     MatSlideToggleModule,
     FormsModule,
-    MatTabsModule
+    MatTabsModule,
+    NgxPaginationModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]

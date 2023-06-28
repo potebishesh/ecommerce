@@ -3,8 +3,10 @@
 <div class="title-header option-title">
     <h3>All Products</h3>
 </div>
+<button routerLink = '/add-new-products' type="button">Add new product</button>
+<input type="text" [(ngModel)]="searchField" placeholder="Search products"/>
 
-<div >
+<div class="table-wrapper">
     <table class="custom-table" id="table_id">
         <thead>
             <tr>
@@ -17,9 +19,8 @@
                 <th>Option</th>
             </tr>
         </thead>
-
         <tbody>
-                <tr *ngFor = "let product of products">
+                <tr *ngFor = "let product of products | productFilter:searchField | paginate: { itemsPerPage: itemsPerPage, currentPage: currentPage }">
                     <td>{{product.productImage}}</td>
                     <td>{{product.productName}}</td>
 
@@ -45,4 +46,7 @@
                 </tr>
         </tbody>
     </table>
+</div>
+<div class="pagination-container">
+    <pagination-controls (pageChange)="currentPage = $event"></pagination-controls>
 </div>

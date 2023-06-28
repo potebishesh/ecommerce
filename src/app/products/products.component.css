@@ -30,24 +30,31 @@ a {
 }
 
 .view {
-color: #747dc6;
+    color: #747dc6;
 }
 
 .edit {
-color: #4aa4d9;
+    color: #4aa4d9;
 }
 
 .delete {
-color: #ef3f3e;
+    color: #ef3f3e;
 }
 
 i {
-padding: 5px;
+    padding: 5px;
 }
 
 a:hover {
-cursor: pointer;
+    cursor: pointer;
 }
+
+.table-wrapper {
+    height: 450px; /* Set the desired fixed height */
+    overflow-y: auto;
+}
+
+
 @font-face {
     font-family: "remixicon";
     src: url('../../assets/fonts/remixicon.eot?t=1590207869815'); /* IE9*/

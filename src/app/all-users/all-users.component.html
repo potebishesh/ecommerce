@@ -1,25 +1,26 @@
 
 <div class="title-header option-title">
     <h3>All Users</h3>
-    <button class="button-18" routerLink = '/add-new-user' type="button">Add new user</button>
+    
 </div>
+<button routerLink = '/add-new-user' type="button">Add new user</button>
 
-<input type="text" [(ngModel)]="searchField" placeholder="Search any fields"/>
+<input type="text" [(ngModel)]="searchField" placeholder="Search users"/>
 
 <div class="table-responsive table-product">
-    <table class="custom-table" id="table_id">
+    <table matSort (matSortChange)="sortData($event)" class="custom-table" id="table_id">
         <thead>
             <tr>
                 <th>User</th>
-                <th>Name</th>
-                <th>Phone</th>
-                <th>Email</th>
+                <th mat-sort-header="name">Name</th>
+                <th mat-sort-header="phone">Phone</th>
+                <th mat-sort-header="email">Email</th>
                 <th>Option</th>
             </tr>
         </thead>
 
         <tbody>
-                <tr *ngFor = "let user of users | userFilter:searchField">
+                <tr *ngFor = "let user of sortedData | userFilter:searchField">
                     <td>
                         <div class="table-image">
                             <img src="assets/images/users/1.jpg" class="img-fluid"
